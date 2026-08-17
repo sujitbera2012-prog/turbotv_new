@@ -1,0 +1,24 @@
+private void handleStatus(String status, String telegram) {
+
+    switch (ACTIVE) {
+
+        case "UNDER_CONSTRUCTION":
+            showUnderConstruction(telegram);
+            break;
+
+        case "SERVER_DOWN":
+            showServerDown(telegram);
+            break;
+
+        case "NEW_VERSION_AVAILABLE":
+            showUpdateRequired(telegram);
+            break;
+
+        case "ACTIVE":
+            handleActive();
+            break;
+
+        default:
+            showServerDown(telegram);
+            break;
+    }
